@@ -1,0 +1,81 @@
+html, body {
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+.container2{
+    width: 1200px;
+    background-color: rgb(37, 35, 35);
+    border: 1px solid rgb(241, 241, 241);
+    margin: 3rem;
+
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px repeat(2, minmax(200px, auto)) 200px;
+    grid-template-areas: 
+        "header header header header"
+        "aside section section section"
+        "aside section section section"
+        "footer footer footer footer";
+ 
+}
+
+header{
+    background-color: blueviolet;
+    grid-area: header;
+
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    align-content: center;
+    justify-content: center;
+}
+
+section{
+    background-color: rgb(180, 199, 14);
+    grid-area: section;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 1rem;
+    row-gap: 2rem;
+}
+
+footer{
+    background-color: darkviolet;
+    grid-area: footer;
+}
+
+aside{
+    background-color: rgb(14, 94, 199);
+    grid-area: aside;
+}
+
+/* 
+.box-4{
+    grid-row: 2/4;
+    align-items: center;
+}
+
+.big-box{
+    background-color: rgb(111, 27, 221);
+    border: 5px solid rgb(245, 221, 8);
+    grid-column: 2/-1;
+    display: flex;
+    justify-content: center;
+}
+.big-box span{
+    gap: 1rem 0px;
+} */
+
+.box{
+    background-color:rgb(111, 27, 221);
+    border: 1px solid rgb(245, 221, 8);
+    font-size: 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
